@@ -5,8 +5,8 @@ body {
 }
 
 body {
-	font-family:'Racing Sans One';
-	color: rgb(0, 153, 0);
+    font-family: 'Press Start 2P', cursive;
+	color: rgb(172, 32, 125);
 }
 #title {
 	text-align: center;
@@ -39,7 +39,6 @@ body {
 
 #general-display { 
     box-sizing: border-box;
-    border: 2px solid rgb(0, 153, 0);
 	text-align: center;
     font-size: 22px;
     
