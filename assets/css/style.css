@@ -6,7 +6,7 @@ body {
 
 body {
     font-family: 'Press Start 2P', cursive;
-	color: rgb(172, 32, 125);
+	color: rgb(255, 255, 255);
 }
 #title {
 	text-align: center;
@@ -34,12 +34,14 @@ body {
 	text-align: center;
 	font-size: 32px;
 	padding: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 }
 
 #general-display { 
-    box-sizing: border-box;
 	text-align: center;
     font-size: 22px;
     
+}
+.empty{
+    padding: 10px;
 }
