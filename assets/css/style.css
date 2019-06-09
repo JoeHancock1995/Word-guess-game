@@ -1,22 +1,23 @@
 body {
-	position: relative;
-	background-color: #282828;
+    background-image:url('file:///Users/Joe/bootcamp_class/homework/Word-guess-game/assets/images/background.jpg');
+    background-repeat:no-repeat;
+    background-size:100%;
 }
 
 body {
-	font-family: "Courier New", Courier, monospace;
-	color: #33FF33;
+	font-family:'Racing Sans One';
+	color: rgb(0, 153, 0);
 }
-
 #title {
 	text-align: center;
 	margin-top: 20px;
-	margin-bottom: 30px;
+    margin-bottom: 30px;
+    font-size: 32px;
 }
 
 #instruction, #alerts {
 	text-align: center;
-	font-size: 12px;
+	font-size: 18px;
 }
 
 #main-content {
@@ -25,7 +26,6 @@ body {
 }
 
 .panel {
-	background-color: #282828;
 	padding: 20px;
 	margin: 10px;
 }
@@ -37,7 +37,10 @@ body {
 	padding-bottom: 20px;
 }
 
-#general-display {
+#general-display { 
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 153, 0);
 	text-align: center;
-	font-size: 16px;
+    font-size: 22px;
+    
 }

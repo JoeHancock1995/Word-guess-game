@@ -12,15 +12,42 @@ var lossCountElement = document.getElementById("loss-count");
 var blinkElements = document.getElementsByClassName("blinking");
 var alertLineElements = document.getElementsByClassName("alert-line");
 
-var alphabet = ['a', 'b', 'c', 'd' ,'e' ,'f' ,'g' ,'h' ,'i' ,'j' ,'k' ,'l' ,'m' ,'n' ,'o' ,'p' ,'q' ,'r' ,'s' ,'t' ,'u' ,'v' ,'w' ,'x' ,'y' ,'z' ];
+var validGuesses = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
 
 var pressAnyKeyToStart = [
-	" ___                                       _                _              _               _   ",
-	"| _ \\ _ _  ___  ___ ___  __ _  _ _  _  _  | |__ ___  _  _  | |_  ___   ___| |_  __ _  _ _ | |_ ",
-	"|  _/| '_|/ -_)(_-<(_-< / _` || ' \\| || | | / // -_)| || | |  _|/ _ \\ (_-<|  _|/ _` || '_||  _|",
-	"|_|  |_|  \\___|/__//__/ \\__,_||_||_|\\_, | |_\\_\\\\___| \\_, |  \\__|\\___/ /__/ \\__|\\__,_||_|   \\__|",
+	"Press any key to start"
+];
+var pressAnyKeyToReset = [
+	" ___                                       _                _                              _   ",
+	"| _ \\ _ _  ___  ___ ___  __ _  _ _  _  _  | |__ ___  _  _  | |_  ___    _ _  ___  ___ ___ | |_ ",
+	"|  _/| '_|/ -_)(_-<(_-< / _` || ' \\| || | | / // -_)| || | |  _|/ _ \\  | '_|/ -_)(_-</ -_)|  _|",
+	"|_|  |_|  \\___|/__//__/ \\__,_||_||_|\\_, | |_\\_\\\\___| \\_, |  \\__|\\___/  |_|  \\___|/__/\\___| \\__|",
 	"                                    |__/             |__/                                      "
-];var game = new Hangman();
+];
+
+var youWin = [
+	"__  __ ____   __  __   _      __ ____ _  __",
+	"\\ \\/ // __ \\ / / / /  | | /| / //  _// |/ /",
+	" \\  // /_/ // /_/ /   | |/ |/ /_/ / /    / ",
+	" /_/ \\____/ \\____/    |__/|__//___//_/|_/  ",
+	"                                           "
+];
+var youLose = [
+	"__  __ ____   __  __  __   ____   ____ ____",
+	"\\ \\/ // __ \\ / / / / / /  / __ \\ / __// __/",
+	" \\  // /_/ // /_/ / / /__/ /_/ /_\\ \\ / _/  ",
+	" /_/ \\____/ \\____/ /____/\\____//___//___/  ",
+	"                                           "
+];
+var emptyAlert = [
+	"                                           ",
+	"                                           ",
+	"                                           ",
+	"                                           ",
+	"                                           "
+];
+
+var game = new Hangman();
 
 document.onkeyup = function(event) {
 	var userGuess = event.key;
@@ -57,24 +84,27 @@ window.setInterval(function() {
 
 function Hangman() {
 	this.wordList = [
-		"asphyxiation",
-		"justice",
-		"death",
-		"fading",
-		"punishment",
-		"sentence",
-		"execution",
-		"unjust",
-		"struggle",
-		"throat",
-		"trachea",
-		"breathing",
-		"oxygen",
-		"gasping",
-		"suffering",
-		"spectators",
-		"gallows",
-		"powerless"
+        "purity",
+		"industrial",
+		"static",
+		"waste",
+		"chemical",
+		"complex",
+		"formation",
+		"steel",
+		"disaster",
+		"toxic",
+		"silver",
+		"power",
+		"pressure",
+		"plume",
+		"noise",
+		"nuclear",
+		"abandoned",
+        "factory",
+        "exclusion",
+        "atrocity",
+        "death",
 	]
 
 	this.word = this.wordList[Math.floor(Math.random() * this.wordList.length)];
