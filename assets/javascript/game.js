@@ -68,8 +68,8 @@ window.setInterval(function() {
 
 function Hangman() {
 	this.wordList = [
-        "purity",
-		"industrial",
+        "disorder",
+		"pyschic tv",
 		"static",
 		"waste",
 		"chemical",
