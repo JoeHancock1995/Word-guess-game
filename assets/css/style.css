@@ -42,6 +42,7 @@ body {
 	margin: 10px;
 }
 
+
 #word-display {
 	text-align: center;
 	font-size: 32px;
@@ -50,14 +51,33 @@ body {
 }
 
 #general-display { 
-	text-align: center;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 5px;
     font-size: 22px;
+    border-width:5px;  
+    line-height: 200%;
+    border-style:ridge;
+
+}
     
 }
-.empty{
-    padding: 10px;
+#empty{
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 #stats {
     text-decoration:  underline overline;
+}
+
+#guessed {
+    text-decoration:  underline overline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#blank {
+    box-sizing: content-box;
+    height: 40px;
+
 }
