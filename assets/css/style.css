@@ -24,10 +24,10 @@ body {
 #instruction, #alerts {
 	text-align: center;
     font-size: 18px;
-    animation: blinker 1s step-start infinite;
+    padding-top: 20px;
 }
 @keyframes blinker {
-    50% {
+    80% {
       opacity: 0;
     }
   }
